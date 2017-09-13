@@ -26,15 +26,13 @@ class Product extends Component {
 
   render() {
     return (
-      <div>
-       <p>{this.props.name} = ${this.props.price}</p>
-       <button className="btn btn-primary" onClick={this.buy}>Buy</button>
-       <button className="btn btn-primary" onClick={this.show}>Show</button>
-       <button className="btn btn-primary" onClick={this.remove}>Remove</button>
-       <h3>{this.state.qty}</h3>
-       <h3>${this.state.qty*this.props.price}</h3>
-       <hr />
-       </div>
+         <div>
+          <center><h1>{this.props.name} = ${this.props.price}</h1></center>
+          <center><h2>{this.state.qty} Orders  = Price: ${this.state.qty*this.props.price}</h2></center>
+          <center><button className="btn btn-success" onClick={this.buy}> + </button>
+                  <button className="btn btn-success" onClick={this.remove}> - </button>
+                  <button className="btn btn-success" onClick={this.show}> SHOW </button></center>
+          </div>
     );
   }
 }
@@ -42,10 +40,8 @@ class Product extends Component {
 class Total extends Component {
   render() {
     return (
-      <div>
-      <h3>Total Balance:${this.props.total} </h3>
-      </div>
-    )
+           <h3>Total Cost : $ {this.props.total} </h3>
+  );
   }
 }
 
@@ -69,10 +65,19 @@ constructor(props) {
   render() {
     return(
       <form onSubmit={this.submit} class="form-group">
-        <input className="form-control" type="text" placeholder="ITEM" ref="name"/>
-        <input className="form-control" type="text" placeholder="PRICE" ref="price"/>
-        <br/>
-        <button className="btn btn-success">ADD ANOTHER STARBUCKS PRODUCT</button>
+      <div className="container">
+          <div className="row">
+              <div className="col-md-4">
+                   <input className="form-control" type="text" placeholder="ITEM" ref="name"/>
+              </div>
+              <div className="col-md-4">
+                   <input className="form-control" type="text" placeholder="PRICE" ref="price"/>
+              </div>
+              <div className="col-md-4">
+                    <button className="btn btn-success">ADD ANOTHER STARBUCKS PRODUCT</button>
+              </div>
+          </div>
+    </div>
       </form>
     );
   }
@@ -82,14 +87,14 @@ class ProductList extends Component {
   constructor(props) {
     super(props);
     this.state={total:0, productList: [
-    {name: "Pumpkin Spice Latte", price: 10},
-    {name: "Salted Caramel Mocha", price: 9},
-    {name: "Caramel Macchiato", price: 8},
-    {name: "Chocolate Mocha", price: 7},
-    {name: "Caffe Mocha", price: 6},
-    {name: "Caffucino", price: 5},
-    {name: "Caffe Latte", price: 4},
-    {name: "Caffe Americano", price: 4}]
+    {name: "PUMPKIN SPICE LATTE", price: 10, image:"/pumpkin_spice_latte.jpg" },
+    {name: "SALTED CARAMEL MOCHA", price: 9},
+    {name: "CARAMEL MACCHIATO", price: 8},
+    {name: "CHOCOLATE MOCHA", price: 7},
+    {name: "CAFE MOCHA", price: 6},
+    {name: "CAFFUCINO", price: 5},
+    {name: "CAFFE LATTE", price: 4},
+    {name: "CAFFE AMERICANO", price: 4}]
   };
     this.calcTotal = this.calcTotal.bind(this);
     this.createProduct =this.createProduct.bind(this);
@@ -113,13 +118,16 @@ class ProductList extends Component {
     var products = this.state.productList.map(
       function(prod){
     return(
-      <Product name={prod.name} price={prod.price}
-             handleShow={component.showProduct}
-             handleTotal={component.calcTotal}/>
+               <div className="col col-xs-6 col-md-3 coffee">
+                  <h1><Product name={prod.name} price={prod.price}
+                  handleShow={component.showProduct}
+                  handleTotal={component.calcTotal}/></h1>
+         </div>
+
       );
   });
   return(
-    <div>
+    <div className="container">
         <ProductForm handleCreate={this.createProduct}/>
        {products}
        <Total total={this.state.total}/>

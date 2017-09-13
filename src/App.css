@@ -1,24 +1,66 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+
+body {
+    width: 100%;
+    height: auto;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
+.container {
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    padding: 0;
+}
+
+.row {
+    margin: 0;
+}
+
+@media (max-width: 540px) {
+  h1
+    font-size: 0.5em;
+  }
+
+h1 {
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #eac784;
+    font-size: 1em;
+}
+
+h2 {
+   font-family: 'Ubuntu', sans-serif;
+   color: #eac784;
+   font-size: 0.7em;
+   font-style: italic;
+}
+
+h3 {
+  font-family: 'Ubuntu', sans-serif;
+  color: 	#fffcfc;
+  font-size: 2em;
+  background: #0b421a;
+}
+
+#logo {
+  width: 80px;
   height: 80px;
+
+}
+.coffee {
+  background: #604c4c;
+  font-family: 'Raleway', sans-serif;
+  padding: 10px;
+  height: 300px;
+  font-size: 1.4em;
+  margin: 5px auto;
+  border: 3px solid #eac784;
+  border-radius: 10px;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
-}
-
-.App-intro {
-  font-size: large;
-}
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.coffee img {
+    border-radius: 10px;
+    height: 185px;
+    width: 455px;
 }
