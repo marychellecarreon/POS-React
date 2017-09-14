@@ -17,7 +17,7 @@ By following this tutorial, you will have the functionality of the basic POS as 
 # Setup/Installation
 Install [node.js](https://nodejs.org/en/)
 
-Install [Create-react-app] (https://facebook.github.io/react/docs/installation.html) which will generate your starting files
+Install [Create-react-app](https://facebook.github.io/react/docs/installation.html) which will generate your starting files
 
 ```sh
 create-react-app my-app
