@@ -1,8 +1,5 @@
 # Basic React Tutorial
 
-[![status|completed](http://marychellecarreon.com/badges/status-completed.svg)]
-[![language|reactjs](http://marychellecarreon.com/badges/language-javascript.svg)]
-
 
 This tutorial aims to teach you how to create a POS app "point of sale". For this case, my POS is a coffee product but this POS is generally applicable for all items with cashier interface. Feel free to fork it!
 
