@@ -207,6 +207,6 @@ export default ProductList;
 }
 ```
 
-Next step is to create the styling to look the POS machine presentable. You can use the file App.css to input the styling appearance that you want on your app.
+Next step is to create the styling to look the POS machine presentable. You can use the file App.css to input the styling appearance that you want on your app by using bootstrap/css commands.
 
 
