@@ -1,12 +1,15 @@
 # Basic React Tutorial
 
+
+# Table of Contents
+ -Setup/Installation[#Setup / Installation]
+
 This tutorial aims to teach you how to create a POS app "point of sale". For this case, my POS is a coffee product but this POS is generally applicable for all items with cashier interface. Feel free to fork it!
 
 # Setup / Installation
 Install [node.js](https://nodejs.org/en/)
 
-Install [Create-react-app] (https://facebook.github.io/react/docs/installation.html)
-Generate your starting files 
+Install [Create-react-app] (https://facebook.github.io/react/docs/installation.html) which will generate your starting files
 
 ```sh
 create-react-app my-app
@@ -41,7 +44,8 @@ Please note that the page will automatically make a reload everytime you edit.
 
  
 You can now open your app in your preferred text editor.
-Since we will create the app from scratch, on App.js, please remove everything inside return. The structure of your App.js should look similar as below.
+Since we will create the app from scratch, on App.js, please remove everything inside return. 
+The structure of your App.js should look similar as below.
 
 ```sh
    import React, { Component } from 'react';
@@ -64,7 +68,7 @@ Make sure also to delete all the details inside the App.css so that you can crea
  # Creating new components
    Components are the heart and soul of React.
    Let's create a new component called "Product". 
-   Main item in POS system is to be able to buy, show or remove the order which we need to define in the "Product" Component.
+   Main item in this POS system : buy, show or remove the order which we need to define in the "Product" Component as shown    below.
    
    ```sh
     class Product extends Component {
@@ -164,7 +168,7 @@ export default ProductList;
 ```
 
 # Handling Forms
-
+ Create a new component: ProductForm with three inputs and a submit button
 ```sh
      class ProductForm extends Component {
      constructor(props) {
