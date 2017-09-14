@@ -76,7 +76,7 @@ Make sure also to delete all the details inside the App.css so that you can crea
  ## Creating new components
    Components are the heart and soul of React.
    Let's create a new component called "Product". 
-   Main item in this POS system : buy, show or remove the order which we need to define in the "Product" Component as shown    below.
+   Main item in this POS system are the following: buy, show or remove the order which we need to define in the "Product" Component as shown below.
    
    ```sh
     class Product extends Component {
@@ -115,9 +115,9 @@ Make sure also to delete all the details inside the App.css so that you can crea
 ```
 
  ## Handling an array
-Let's create an array of product which we can create in another new component; for this case I have added the coffee menu, price and the image for each array which is saved in the image in the public folder.
+Let's create an array of product which we can create in another new component; for this case I have added the coffee menu, price and the image for each array saved in the image in the public folder.
 
-We can define the function that we want before render [or after super(props)]. 
+We can define the function that we want after our constructor. 
 For this case, we have defined the calcTotal, createProduct and showProduct.
 
 - calcTotal - compute for the cost of the item purchase (qty * price) per item.
