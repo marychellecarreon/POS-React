@@ -1,10 +1,17 @@
 # Basic React Tutorial
 
+[![status|completed](http://marychellecarreon.com/badges/status-completed.svg)]
+[![language|reactjs](http://marychellecarreon.com/badges/language-javascript.svg)]
+
+
+This tutorial aims to teach you how to create a POS app "point of sale". For this case, my POS is a coffee product but this POS is generally applicable for all items with cashier interface. Feel free to fork it!
+
 
 ## Table of Contents
  - [Setup/Installation](#setup/installation)
-
-This tutorial aims to teach you how to create a POS app "point of sale". For this case, my POS is a coffee product but this POS is generally applicable for all items with cashier interface. Feel free to fork it!
+ - [Creating New Components](#creating-new-components)
+ - [Handling an Array](#handling-an-array)
+  - [Handling Forms](#handling-forms)
 
 # Setup/Installation
 Install [node.js](https://nodejs.org/en/)
@@ -65,7 +72,7 @@ export default App;
 
 Make sure also to delete all the details inside the App.css so that you can create the format / styling that you prefer.
   
- # Creating new components
+ ## Creating new components
    Components are the heart and soul of React.
    Let's create a new component called "Product". 
    Main item in this POS system : buy, show or remove the order which we need to define in the "Product" Component as shown    below.
@@ -106,6 +113,7 @@ Make sure also to delete all the details inside the App.css so that you can crea
 }
 ```
 
+ ## Handling an array
 Let's create an array of product which we can create in another new component; for this case I have added the coffee menu, price and the image for each array which is saved in the image in the public folder.
 
 We can define the function that we want before render [or after super(props)]. 
