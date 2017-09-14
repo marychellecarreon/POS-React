@@ -78,6 +78,8 @@ Make sure also to delete all the details inside the App.css so that you can crea
    Let's create a new component called "Product". 
    Main item in this POS system are the following: buy, show or remove the order which we need to define in the "Product" Component as shown below.
    
+   Render will output the function we have defined on the component.
+   
    ```sh
     class Product extends Component {
     constructor(props) {
