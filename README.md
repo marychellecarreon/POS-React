@@ -5,7 +5,8 @@ This tutorial aims to teach you how to create a POS app "point of sale". For thi
 
 By following this tutorial, you will have the functionality of the basic POS as shown on below image.
 
-![screen shot 2017-09-14 at 5 48 34 pm](https://user-images.githubusercontent.com/26729817/30424992-40135cd0-997a-11e7-95fa-2a30c6ec51f9.png)
+![screen shot 2017-09-14 at 6 51 39 pm](https://user-images.githubusercontent.com/26729817/30426231-d6a4eeb8-997d-11e7-88ad-09e29028b81e.png)
+
 
 
 ## Table of Contents
