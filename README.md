@@ -1,12 +1,12 @@
 # Basic React Tutorial
 
 
-# Table of Contents
- - [Setup/Installation][#setup / installation]
+## Table of Contents
+ - [Setup/Installation](#setup/installation)
 
 This tutorial aims to teach you how to create a POS app "point of sale". For this case, my POS is a coffee product but this POS is generally applicable for all items with cashier interface. Feel free to fork it!
 
-# Setup / Installation
+# Setup/Installation
 Install [node.js](https://nodejs.org/en/)
 
 Install [Create-react-app] (https://facebook.github.io/react/docs/installation.html) which will generate your starting files
