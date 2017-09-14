@@ -47,8 +47,15 @@ h3 {
 #logo {
   width: 80px;
   height: 80px;
-
+  animation: logo-spin infinite 2s linear;
 }
+
+@keyframes logo-spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+
+
 .coffee {
   font-family: 'Raleway', sans-serif;
   height: 280px;
