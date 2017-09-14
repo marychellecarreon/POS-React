@@ -19,20 +19,21 @@ body {
 }
 
 @media (max-width: 540px) {
-  h1
+  h1 {
     font-size: 0.5em;
+  }
   }
 
 h1 {
     font-family: 'Source Sans Pro', sans-serif;
     color: #eac784;
-    font-size: 1em;
+    font-size: 1.1em;
 }
 
 h2 {
    font-family: 'Ubuntu', sans-serif;
    color: #eac784;
-   font-size: 0.7em;
+   font-size: 0.9em;
    font-style: italic;
 }
 
@@ -49,18 +50,23 @@ h3 {
 
 }
 .coffee {
-  background: #604c4c;
   font-family: 'Raleway', sans-serif;
-  padding: 10px;
-  height: 300px;
+  height: 280px;
   font-size: 1.4em;
-  margin: 5px auto;
-  border: 3px solid #eac784;
-  border-radius: 10px;
+  width: 300px;
 }
 
 .coffee img {
     border-radius: 10px;
-    height: 185px;
-    width: 455px;
+    height: 250px;
+    width: 250px;
+
+}
+
+
+
+h4 {
+    font-size: 1.5em;
+    color: #362415;
+    font-weight: bold;
 }

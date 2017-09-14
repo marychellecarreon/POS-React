@@ -87,14 +87,14 @@ class ProductList extends Component {
   constructor(props) {
     super(props);
     this.state={total:0, productList: [
-    {name: "PUMPKIN SPICE LATTE", price: 10, image:"/pumpkin_spice_latte.jpg" },
-    {name: "SALTED CARAMEL MOCHA", price: 9},
-    {name: "CARAMEL MACCHIATO", price: 8},
-    {name: "CHOCOLATE MOCHA", price: 7},
-    {name: "CAFE MOCHA", price: 6},
-    {name: "CAFFUCINO", price: 5},
-    {name: "CAFFE LATTE", price: 4},
-    {name: "CAFFE AMERICANO", price: 4}]
+    {name: "PUMPKIN SPICE LATTE", price: 10, img_id: "00"},
+    {name: "SALTED CARAMEL MOCHA", price: 9, img_id: "01" },
+    {name: "CARAMEL MACCHIATO", price: 8, img_id: "02" },
+    {name: "CHOCOLATE MOCHA", price: 7, img_id: "03" },
+    {name: "CAFE MOCHA", price: 6, img_id: "04"},
+    {name: "CAPPUCINO", price: 5, img_id: "05"},
+    {name: "CAFFE LATTE", price: 4, img_id: "06"},
+    {name: "CAFFE AMERICANO", price: 4, img_id: "07"}]
   };
     this.calcTotal = this.calcTotal.bind(this);
     this.createProduct =this.createProduct.bind(this);
@@ -118,12 +118,14 @@ class ProductList extends Component {
     var products = this.state.productList.map(
       function(prod){
     return(
-               <div className="col col-xs-6 col-md-3 coffee">
+               <div className="col col-xs-12 col-md-3">
                   <h1><Product name={prod.name} price={prod.price}
                   handleShow={component.showProduct}
                   handleTotal={component.calcTotal}/></h1>
+               <div className="coffee">
+                 <img src={process.env.PUBLIC_URL + 'img/img'+ prod.img_id +'.png'} className="img-responsive"/>
          </div>
-
+         </div>
       );
   });
   return(
