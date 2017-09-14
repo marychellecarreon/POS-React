@@ -3,7 +3,7 @@
 
 This tutorial aims to teach you how to create a POS app "point of sale". For this case, my POS is a coffee product but this POS is generally applicable for all items with cashier interface. Feel free to fork it!
 
-By following this tutorial, you will have the functionality of the basic POS as shown in below image.
+By following this tutorial, you will have the functionality of the basic POS as shown on below image.
 
 ![screen shot 2017-09-14 at 5 48 34 pm](https://user-images.githubusercontent.com/26729817/30424992-40135cd0-997a-11e7-95fa-2a30c6ec51f9.png)
 
