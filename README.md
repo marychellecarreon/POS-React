@@ -2,7 +2,7 @@
 
 
 # Table of Contents
- -Setup/Installation[#Setup / Installation]
+ - [Setup/Installation][#setup / installation]
 
 This tutorial aims to teach you how to create a POS app "point of sale". For this case, my POS is a coffee product but this POS is generally applicable for all items with cashier interface. Feel free to fork it!
 
