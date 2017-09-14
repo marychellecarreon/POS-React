@@ -101,3 +101,95 @@ Make sure also to delete all the details inside the App.css so that you can crea
   }
 }
 ```
+
+Let's create an array of product which we can create in another new component; for this case I have added the coffee menu, price and the image for each array which is saved in the image in the public folder.
+
+We can define the function that we want before render [or after super(props)]. 
+For this case, we have defined the calcTotal, createProduct and showProduct.
+
+- calcTotal - compute for the cost of the item purchase (qty * price) per item.
+- showProduct - alert on screen on the item chosen
+- createProduct - Create another item/product not included in the item inside the array below.
+
+```sh
+class ProductList extends Component {
+  constructor(props) {
+    super(props);
+    this.state={total:0, productList: [
+    {name: "PUMPKIN SPICE LATTE", price: 10, img_id: "00"},
+    {name: "SALTED CARAMEL MOCHA", price: 9, img_id: "01" },
+    {name: "CARAMEL MACCHIATO", price: 8, img_id: "02" },
+    {name: "CHOCOLATE MOCHA", price: 7, img_id: "03" },
+    {name: "CAFE MOCHA", price: 6, img_id: "04"},
+    {name: "CAPPUCINO", price: 5, img_id: "05"},
+    {name: "CAFFE LATTE", price: 4, img_id: "06"},
+    {name: "CAFFE AMERICANO", price: 4, img_id: "07"}]
+  };
+  this.calcTotal = this.calcTotal.bind(this);
+    this.createProduct =this.createProduct.bind(this);
+  }
+
+  calcTotal(price) {
+    this.setState({total: this.state.total + price})
+  }
+
+  showProduct(name) {
+    alert("You are buying "+name);
+  }
+
+  createProduct(product) {
+    this.setState({productList: this.state.productList.concat(product)
+    });
+  }
+
+  render() {
+  var component = this;
+    var products = this.state.productList.map(
+      function(prod){
+    return(
+       <h1><Product name={prod.name} price={prod.price}
+       handleShow={component.showProduct}
+       handleTotal={component.calcTotal}/></h1>
+       <img src={process.env.PUBLIC_URL + 'img/img'+ prod.img_id +'.png'} />
+      );
+  });
+  return(
+        <ProductForm handleCreate={this.createProduct}/>
+       {products}
+            <Total total={this.state.total}/>
+  )
+}
+}
+export default ProductList;
+```
+
+# Handling Forms
+
+```sh
+     class ProductForm extends Component {
+     constructor(props) {
+     super(props);
+     this.submit = this.submit.bind(this);
+      }
+     submit(e) {
+      e.preventDefault();
+      var product = {
+          name:this.refs.name.value,
+          price:parseInt(this.refs.price.value)
+       };
+        this.props.handleCreate(product);
+        this.refs.name.value="";
+        this.refs.price.value="";
+       }
+
+      render() {
+        return(
+        <form onSubmit={this.submit} class="form-group">
+        <input className="form-control" type="text" placeholder="ITEM" ref="name"/>
+           <input className="form-control" type="text" placeholder="PRICE" ref="price"/>
+        <button className="btn btn-success">ADD ANOTHER STARBUCKS PRODUCT</button>
+       </form>
+    );
+  }
+}
+```
