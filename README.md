@@ -48,7 +48,7 @@ In the project directory, run:
 ```
 
 Then, open the [http://localhost:3000](http://localhost:3000) in your browser.
-Please note that the page will automatically make a reload everytime you edit.
+Notice that page will automatically reload everytime you make an edit. 
 
  
 You can now open your app in your preferred text editor.
