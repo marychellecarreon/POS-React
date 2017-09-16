@@ -1,9 +1,9 @@
-# Basic React Tutorial (POS : Point of Sale Machine)
+# Basic React Tutorial (Shopping Cart)
 
 
-This tutorial aims to teach you how to create a POS app "point of sale". For this case, my POS is a coffee product but this POS is generally applicable for all items with cashier interface. Feel free to fork it!
+This tutorial aims to teach you how to create a Shopping Cart. For this case, this shopping cart is a coffee product which is generally applicable for all items with cashier interface. Feel free to fork it!
 
-By following this tutorial, you will have the functionality of the basic POS as shown on below image.
+By following this tutorial, you will have the functionality of the basic shopping cart as shown on below image.
 
 ![screen shot 2017-09-14 at 6 51 39 pm](https://user-images.githubusercontent.com/26729817/30426231-d6a4eeb8-997d-11e7-88ad-09e29028b81e.png)
 
